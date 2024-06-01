@@ -1,0 +1,159 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+.section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+    position: relative;
+}
+
+.skills {
+    background-color: #f0f0f0;
+}
+
+.projects {
+    height: 130vh;
+    background-color: #cfcfcf;
+    position: relative;
+}
+
+.other {
+    background-color: #a0a0a0;
+}
+
+.projectHeading {
+    position: -webkit-sticky; /* For Safari */
+    position: sticky;
+    top: 0;
+    background-color: #db3b3b;
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+    z-index: 1;
+    transition: position 0.3s ease;
+}.projectHeading h1{
+    color: #f0f0f0;
+}
+.projectContent {
+    padding: 20px;
+}
+
+.topnav {
+    z-index: 99;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1.5rem;
+    margin: 1rem 1.5rem;
+    background-color: #fff;
+    backdrop-filter: blur(20px);
+    border-radius: 0.3rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.topnav ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.topnav ul li {
+    margin: 0 15px;
+}
+
+.topnav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
+.topnav ul li a:hover {
+    text-decoration: underline;
+}
+
+.reveal-text {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.reveal-text.active {
+    opacity: 1;
+}
+div.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background-color: yellow;
+    padding: 50px;
+    font-size: 20px;
+  }
+
+
+  width: 700px;
+  height: 20vh;
+  padding: 20px 0 2rem;
+  position: fixed;
+  top: 50%;
+  left: 50%;    
+  transform: translate(-50%,-50%);
+  transition: position 0.3s ease;
+
+  top: 10%;
+  left: 50%;    
+  transform: translate(-50%,-50%);
+  transition: position 0.3s ease;
+  overflow: hidden;
+
+  .projectHeading .sticky{
+    z-index: 101;
+    grid-column-gap: 6rem;
+    grid-row-gap: 6rem;
+    background-color: #fff;
+    border-bottom: .0625rem solid #000;
+    position: fixed;
+    width: 100%;
+    height: 20vh;
+    padding: 20px 0 2rem;
+    top: 10%;   
+    transform: translate(-50%,-50%);
+    transition: position 0.3s ease;
+}
+
+//window.addEventListener('scroll', () => {
+    const projectsSection = document.querySelector('.projects');
+    const projectHeading = document.querySelector('.projectHeading');
+    
+    // Calculate the offset top for the projects section and the project heading
+    const projectsRect = projectsSection.getBoundingClientRect();
+    const projectsOffsetTop = projectsRect.top + window.scrollY;
+    const projectsOffsetBottom = projectsOffsetTop + projectsSection.offsetHeight;
+    
+    // Calculate the scroll position
+    const viewport =window.scrollY + window.innerHeight;
+  
+    console.log('projectsOffsetBottom:', projectsOffsetBottom);
+    console.log('viewport:', viewport);
+    console.log('projectsOffsetTop:', projectsOffsetTop);
+    console.log('viewport:', viewport);
+  
+    // Check if the project heading should be sticky or relative
+    if (projectsOffsetTop <= 1433) {
+      projectHeading.style.position = 'Fixed';
+      
+    }
+  });
