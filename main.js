@@ -53,7 +53,7 @@ window.addEventListener('scroll', () => {
 
 window.addEventListener('scroll', () => {
   const skills = document.querySelector('.skills');
-  const projects = document.querySelector('.projects');
+  const projects = document.querySelector('.parallex-box');
   
   // Get the offsetY of skills
   const skillsRect = skills.getBoundingClientRect();
@@ -110,6 +110,22 @@ window.addEventListener('scroll', () => {
     projectHeading.style.transform = 'translateY(0px)';
   }
 });
+
+
+
+//keyup
+document.querySelectorAll('.js-input').forEach(function(input) {
+  input.addEventListener('keyup', function() {
+      if (input.value) {
+          input.classList.add('not-empty');
+      } else {
+          input.classList.remove('not-empty');
+      }
+  });
+});
+
+
+
 
 
 
