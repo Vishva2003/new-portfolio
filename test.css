@@ -136,12 +136,24 @@ h1:nth-child(2) {
 
 .foreground-photo {
     position: absolute;
-    z-index: 1;
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+
+   /* width: 60%;
+    height: 40vh;      
+    background: url(https://i.postimg.cc/N0svSLyZ/Pngtree-secretary-s-day-secretary-work-4389321.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;*/
 }
 
 .foreground-photo img {
-    width: 200px;
-    border-radius: 50%;
+    min-width: 0;
+    max-width: 50%;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 auto;
 }
 
 /* Responsive Media Queries */
@@ -491,7 +503,8 @@ h1:nth-child(2) {
     font-weight: 500;
     text-decoration: none;
     color: #fff;
-    position: relative; /* Ensure ::after is positioned relative to the anchor */
+    position: relative;
+    margin: 0 auto;
 }
 
 .about .box a:hover::after {
@@ -539,9 +552,10 @@ h1:nth-child(2) {
 @media (max-width: 768px) {
     .about-container {
         grid-template-columns: 1fr;
+        gap: 0px;
     }
     .box {
-        padding: 30px 15px;
+        padding: 10px 15px;
     }
     .about .box h1 {
         font-size: 3rem;
@@ -799,15 +813,31 @@ h1:nth-child(2) {
 
 
 
-/* For screens smaller than 768px */
-@media (max-width: 767px) {
+@media (max-width: 425px) {
+    .projects .projectContainer h1 {
+        font-size: 2rem; /* Adjusted font size for smaller screens */
+    }
+}
+
+@media (max-width: 770px) {
     .projectHeading {
-        height: 15vh; /* Adjusted height for smaller screens */
+        height: auto; /* Adjusted height for smaller screens */
+    }
+
+    .project-container-left{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .project-container-right{
+        display: flex;
+        flex-direction: column-reverse;
     }
 
     .projects h1 {
-        font-size: 3.5rem; /* Adjusted font size for smaller screens */
+        font-size: 4rem; /* Adjusted font size for medium screens */
     }
+
 
     .project-img img {
         width: 100%; /* Make the image responsive */
@@ -818,7 +848,7 @@ h1:nth-child(2) {
 /* For screens between 768px and 1023px */
 @media (min-width: 768px) and (max-width: 1023px) {
     .projectHeading {
-        height: 10vh; /* Adjusted height for medium screens */
+        height: fit-content; /* Adjusted height for medium screens */
     }
 
     .projects h1 {
@@ -989,8 +1019,23 @@ body {
   text-decoration: underline;
 }
 
-/* For screens smaller than 768px */
-@media (max-width: 767px) {
+
+@media (max-width: 425px) {
+    .get-in-touch .title {
+        font-size: 2.5rem; /* Adjusted font size for smaller screens */
+    }
+
+    .contact-form .label {
+        font-size: 1.5rem; /* Adjusted font size for smaller screens */
+    }
+
+    .contact-form .input-text,
+    .contact-form .submit-btn {
+        font-size: 1.8rem; /* Adjusted font size for smaller screens */
+    }
+}
+
+@media (min-width: 768px) {
     .get-in-touch .title {
         font-size: 3.5rem; /* Adjusted font size for smaller screens */
     }
