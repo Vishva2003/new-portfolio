@@ -1,29 +1,3 @@
-const inactive = document.querySelector('.inactive');
-const active = document.querySelector('.active');
-const topnav = document.querySelector('.topnav');
-
-function linktree() {
-    inactive.style.display='none';
-    active.style.display = 'block';
-}
-
-function hidetree() {
-  inactive.style.display='block';
-  active.style.display = 'none';
-}
-
-//reveal bottom nav
-
-window.addEventListener('scroll', function() {
-  const bottomNav = document.querySelector('.bottom-nav');
-  const pageHeight = window.innerHeight/2;
-
-  if (window.scrollY >= pageHeight) {
-      bottomNav.classList.add('show');
-  } else {
-      bottomNav.classList.remove('show');
-  }
-});
 
 //reveal-text
 

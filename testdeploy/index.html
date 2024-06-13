@@ -6,28 +6,14 @@
     <title>Vishva's Portfolio</title>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="test.css">
+    <link rel="stylesheet" href="port.css">
 </head>
 <body>
     <div class="sticky-transition">
         <section class="topnav">
-            <div class="inactive">
-                <div class="inactivecontainer">
-                <div class="logo"><img src="./images/VISHVA.png" alt=""></div>
-                <div class="linkTree"><button type="button" onclick="linktree()"><i class="fa-solid fa-tree"></i>LINK TREE</button></div>
-                </div>
-            </div>
-        
-            <div class="active" style="display: none;">
-                <div class="activecontainer">
-                <a class="links" href="http://">Instagram<i class="fa-sharp fa-solid fa-link"></i></a>
-                <a class="links" href="http://">Twitter<i class="fa-sharp fa-solid fa-link"></i></a>
-                <a class="links" href="http://">Linkedin<i class="fa-sharp fa-solid fa-link"></i></a>
-                <i id="cross" class="fa-solid fa-square-xmark fa-rotate-by" style="--fa-rotate-angle: 000000deg;" onclick="hidetree()"></i>
-                </div>
-                </div>
+            <div class="logo"><img src="./images/VISHVA.png" alt=""></div>
+            <div class="linkTree"><button type="button"><i class="fa-solid fa-tree"></i>LINK TREE</button></div>
         </section>
-        
         <section class="page1">
             <div class="hero">
             <div class="tickerwrapper" style="--t:15s">
@@ -44,11 +30,12 @@
 
     <nav class="bottom-nav">
         <img src="./images/VISHVA.png" alt="">
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Projects</a>
-        <a href="#">Contact</a>
-
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
     </nav>
 
     <section class="about">

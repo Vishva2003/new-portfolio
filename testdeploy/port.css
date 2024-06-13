@@ -49,13 +49,6 @@ body, html {
     left: 0;
     right: 0;
 }
-.inactive{
-    width: 100%;
-    animation: topnavfadein 0.5s linear forwards;
-    transform: translateY(0px);
-}
-
-
 
 .topnav .logo img {
     width: 32px;
@@ -77,80 +70,6 @@ body, html {
 
 .linkTree button i {
     color: #000;
-}
-
-.active{
-    width: 100%;
-
-    padding: 2px 10%;
-    animation: topnavfadein 0.5s linear forwards;
-    transform: translateY(0px);
-}
-.activecontainer{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.inactivecontainer{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-@keyframes topnavfadein{
-    0%{
-        opacity: 0;
-        transform: translateY(-10px);
-
-    }
-    100%{
-        opacity: 1;
-        transform: translateY(0px);
-
-    }
-}
-
-.active a {
-    padding: 15px 25px;
-    border: 1px solid black;
-    width: 15%;
-    text-decoration:none;
-    color: #212121;
-    z-index: 1;
-    position: relative;
-    font-weight: 1000;
-    font-size: 17px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: all 250ms;
-    overflow: hidden;
-   }
-   
-.active a::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 0;
-   
-    background-color: var(--primary-color);
-    z-index: -1;
-    transition: all 250ms
-   }
-   
-.active a:hover {
-    color: #e8e8e8;
-   }
-   
-.active a:hover::before {
-    width: 100%;
-   }
-
-.active #cross{
-    font-size: 1.5rem;
 }
 
 .page1 {
@@ -389,35 +308,36 @@ h1:nth-child(2) {
     bottom: 30px;
     left: 50%;
     transform: translate(-50%);
-    width: 350px;
+    width: 400px;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.412);
+    background-color: rgba(255, 255, 255, 0.655);
     padding: 10px 20px;
     transition: opacity 0.5s;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-radius: 10px;
-    border: 1px solid #ffffff1d;
+    border-radius: 20px;
     box-shadow: 0px 0px 16px -3px rgba(0,0,0,0.31);
     z-index: 2;
-    opacity: 0;
 }
 
 .bottom-nav img {
     width: 32px;
 }
 
+.bottom-nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
 
-.bottom-nav a {
+.bottom-nav ul li a {
     text-decoration: none;
     color: #ffffff;
     font-weight: bold;
     visibility: visible;
-}
-
-.bottom-nav.show {
-    opacity: 1;
 }
 
 /* Media Queries */
@@ -575,7 +495,7 @@ h1:nth-child(2) {
     padding: 0 20px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: left;
     gap: 20px;
     cursor: pointer;
     font-family: var(--subhead-font);
