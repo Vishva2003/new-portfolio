@@ -48,6 +48,7 @@ body, html {
     top: 0;
     left: 0;
     right: 0;
+    cursor: none;
 }
 .inactive{
     width: 100%;
@@ -167,6 +168,7 @@ body, html {
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: none;
 }
 
 .tickerwrapper {
@@ -218,7 +220,7 @@ h1:nth-child(2) {
 .foreground-photo {
     position: absolute;
     z-index: 5;
-    width: 100%;
+    width: 40%;
     height: 100%;
 
    /* width: 60%;
@@ -231,8 +233,10 @@ h1:nth-child(2) {
 
 .foreground-photo img {
     min-width: 0;
-    max-width: 50%;
-    display: inline-block;
+    max-width: 1000px;
+    display: block;
+    bottom: 0;
+    position: relative;
     vertical-align: middle;
     margin: 0 auto;
 }
@@ -402,6 +406,7 @@ h1:nth-child(2) {
     box-shadow: 0px 0px 16px -3px rgba(0,0,0,0.31);
     z-index: 2;
     opacity: 0;
+    cursor: none;
 }
 
 .bottom-nav img {
@@ -518,6 +523,7 @@ h1:nth-child(2) {
     position: relative;
     top: 0;
     scroll-behavior: smooth;
+    
 }
 
 .about-container {
@@ -527,6 +533,7 @@ h1:nth-child(2) {
     gap: 30px;
     padding: 10px;
     justify-content: center;
+    cursor: none;
 }
 
 .box {
@@ -537,6 +544,7 @@ h1:nth-child(2) {
     text-align: center;
     font-size: 5rem;
     font-family: var(--heading-font);
+    cursor: none;
 }
 
 .about .box p {
@@ -545,6 +553,7 @@ h1:nth-child(2) {
     font-weight: 500;
     line-height: 1.5;
     font-family: var(--subhead-font);
+    cursor: none;
 }
 
 .about .box .cv {
@@ -582,7 +591,7 @@ h1:nth-child(2) {
     width: 0;
     height: 3px;
     position: absolute;
-    bottom: -5px;
+    bottom: -10px;
     left: 20px;
     background-color: var(--third-color);
     animation: anime 0.5s linear forwards;
@@ -662,6 +671,7 @@ h1:nth-child(2) {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    cursor: none;
 }
 
 .scroll {
@@ -755,6 +765,7 @@ h1:nth-child(2) {
     background-color: #ffffff;
     z-index: 4;
     border-radius: 5px;
+    cursor: none;
 
 }
 
@@ -783,6 +794,14 @@ h1:nth-child(2) {
     margin: 1rem 2rem auto;
 
 }
+
+.projects h3{
+    font-size: 2rem;
+    text-align: center;
+    margin: 1rem 2rem auto;
+
+}
+
 .projectList{
     width: 90%;
     margin: 5rem auto 3rem;
@@ -885,7 +904,10 @@ h1:nth-child(2) {
 
 @media (max-width: 425px) {
     .projects .projectContainer h1 {
-        font-size: 2rem; /* Adjusted font size for smaller screens */
+        font-size: 1.2rem; /* Adjusted font size for smaller screens */
+    }
+    .projects h3 {
+        font-size: 1.2rem; /* Adjusted font size for smaller screens */
     }
 }
 
@@ -909,6 +931,9 @@ h1:nth-child(2) {
 
     .projects h1 {
         font-size: 4rem; /* Adjusted font size for medium screens */
+    }
+    .projects h3 {
+        font-size: 2rem; /* Adjusted font size for medium screens */
     }
 
 
@@ -942,12 +967,12 @@ h1:nth-child(2) {
 
 .contact{
     width: 100%;
-    height: 120vh;
+    height: 100vh;
     background-color: var(--primary-color);
     z-index: 6;
     margin-top: -2px;
     position: relative;
-    top: 0;
+    cursor: none;
 }
 
 
@@ -955,14 +980,6 @@ h1:nth-child(2) {
   text-align: center;
 }
 
-html {
-  height: 100%;
-}
-
-body {
-  height: 100%;
-  position: relative;
-}
 
 .row {
   margin: -20px 0;
@@ -985,25 +1002,25 @@ body {
 }
 
 .content-wrapper {
-  min-height: 100%;
-  position: relative;
-}
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    height: fit-content;
+
+  } 
 
 .get-in-touch {
     max-width: 80%;
     margin: 0 auto;
+    height: 100vh;
     /* border-radius: 30px; */
     position: relative;
-    top: 50%;
-    transform: translateY(-50%);
+    justify-content: center;
+    align-items: center;
 }
 .form-cover{
     width: 100%;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translate(-50%,-50%);
-   padding: 3rem;
+    padding: 3rem 0rem;
 
 }
 
@@ -1229,3 +1246,29 @@ body {
     }
 }
 
+
+
+/*cursor*/
+
+.cursor {
+    position: fixed;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+  }
+  .cursor--small {
+    width: 20px;
+    height: 20px;
+    left: -2.5px;
+    top: -2.5px;
+    border-radius: 50%;
+    z-index: 11000;
+    box-shadow: inset 0px 0px 0px 2px rgba(255,255,255,1);
+    border: 1px solid var(--primary-color);
+    background: none;
+  }
+  .cursor--canvas {
+    width: 100vw;
+    height: 100vh;
+    z-index: 12000;
+  }

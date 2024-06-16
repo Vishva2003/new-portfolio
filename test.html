@@ -9,6 +9,11 @@
     <link rel="stylesheet" href="test.css">
 </head>
 <body>
+
+    <div class="cursor cursor--small"></div>
+    <canvas class="cursor cursor--canvas" resize></canvas>
+
+
     <div class="sticky-transition">
         <section class="topnav">
             <div class="inactive">
@@ -34,7 +39,7 @@
                 <h1>VISHVA MV</h1>
                 <h1>VISHVA MV</h1>
                 <div class="foreground-photo">
-               <!-- <img src="https://i.postimg.cc/N0svSLyZ/Pngtree-secretary-s-day-secretary-work-4389321.png" alt="Vishva">-->
+               <img src="https://i.postimg.cc/N0svSLyZ/Pngtree-secretary-s-day-secretary-work-4389321.png" alt="Vishva">
                 </div>
             </div>
             </div>
@@ -178,7 +183,7 @@
                         <img src="./images/bg-mountain.webp" alt="">
                     </div>
                     <div class="project-heading">
-                        <h1 class="sub-reveal-text-left">12 Fox</h1>
+                        <h3 class="sub-reveal-text-left">12 Fox</h3>
                     </div>
                 </div>
             </div>
@@ -186,7 +191,7 @@
             <div class="projectContainer">
                 <div class="project-container-right">
                     <div class="project-heading">
-                        <h1 class="sub-reveal-text">12 Fox</h1>
+                        <h3 class="sub-reveal-text">RE’GREEN – SMART FARMING COMPANION</h3>
                     </div>
                     <div class="project-img">
                         <img src="./images/bg-mountain.webp" alt="">
@@ -200,15 +205,14 @@
                         <img src="./images/bg-mountain.webp" alt="">
                     </div>
                     <div class="project-heading">
-                        <h1 class="sub-reveal-text-left">12 Fox</h1>
-                    </div>
+                        <h3 class="sub-reveal-text-left">FORECASTING CRYPTOCURRENCY TRENDS USING RNN AND LSTM</h3>                  </div>
                 </div>
             </div>
 
             <div class="projectContainer">
                 <div class="project-container-right">
                     <div class="project-heading">
-                        <h1 class="sub-reveal-text">12 Fox</h1>
+                        <h3 class="sub-reveal-text">12 Fox</h3>
                     </div>
                     <div class="project-img">
                         <img src="./images/bg-mountain.webp" alt="">
@@ -241,12 +245,15 @@
             </form>
         </div>
         </div>
+
     </section>    
     </div>
 
-
+ 
     <script src="main.js"></script>
-
+    <script src="./cursor.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.12.0/paper-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/simplex-noise/2.4.0/simplex-noise.min.js"></script>
 
 </body>
 </html>
