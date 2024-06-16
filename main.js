@@ -51,9 +51,9 @@ window.addEventListener('scroll', () => {
   fadeInElements.forEach(element => {
       const elementRect = element.getBoundingClientRect();
       if (elementRect.top < triggerHeight) {
-          element.classList.add('active');
+          element.classList.add('active-left');
       }else{
-        element.classList.remove('active');
+        element.classList.remove('active-left');
       }
   });
 });
@@ -67,9 +67,9 @@ window.addEventListener('scroll', () => {
   fadeInElements.forEach(element => {
       const elementRect = element.getBoundingClientRect();
       if (elementRect.top < triggerHeight) {
-          element.classList.add('active');
+          element.classList.add('active-right');
       }else{
-        element.classList.remove('active');
+        element.classList.remove('active-right');
       }
   });
 });
@@ -126,7 +126,7 @@ window.addEventListener('scroll', () => {
   console.log('projectsOffsetBottom:',projectsOffsetBottom);
 
   const viewportHeight = window.innerHeight;
-  const threshold = viewportHeight * 0.001;
+  const threshold = viewportHeight * 0;
 
   // Check if the project heading should be sticky or relative
   if ((window.scrollY + threshold > projectsOffsetTop) && (window.scrollY+ threshold < projectsOffsetBottom)) {
@@ -146,9 +146,12 @@ document.querySelectorAll('.js-input').forEach(function(input) {
           input.classList.add('not-empty');
       } else {
           input.classList.remove('not-empty');
+          
       }
   });
 });
+
+
 
 
 
