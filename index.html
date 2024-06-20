@@ -6,21 +6,40 @@
     <title>Vishva's Portfolio</title>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="port.css">
+    <link rel="stylesheet" href="test.css">
 </head>
 <body>
+
+    <div class="cursor cursor--small"></div>
+    <canvas class="cursor cursor--canvas" resize></canvas>
+
+
     <div class="sticky-transition">
         <section class="topnav">
-            <div class="logo"><img src="./images/VISHVA.png" alt=""></div>
-            <div class="linkTree"><button type="button"><i class="fa-solid fa-tree"></i>LINK TREE</button></div>
+            <div class="inactive">
+                <div class="inactivecontainer">
+                <div class="logo"><img src="./images/VISHVA.png" alt=""></div>
+                <div class="linkTree"><button type="button" onclick="linktree()"><i class="fa-solid fa-tree"></i>LINK TREE</button></div>
+                </div>
+            </div>
+        
+            <div class="active" style="display: none;">
+                <div class="activecontainer">
+                <a class="links" href="http://">Instagram<i class="fa-sharp fa-solid fa-link"></i></a>
+                <a class="links" href="http://">Twitter<i class="fa-sharp fa-solid fa-link"></i></a>
+                <a class="links" href="http://">Linkedin<i class="fa-sharp fa-solid fa-link"></i></a>
+                <i id="cross" class="fa-solid fa-square-xmark fa-rotate-by" style="--fa-rotate-angle: 000000deg;" onclick="hidetree()"></i>
+                </div>
+                </div>
         </section>
+        
         <section class="page1">
             <div class="hero">
             <div class="tickerwrapper" style="--t:15s">
-                <h1>VISHVA MV</h1>
-                <h1>VISHVA MV</h1>
+                <h1>Vishva MV</h1>
+                <h1>Vishva MV</h1>
                 <div class="foreground-photo">
-               <!-- <img src="https://i.postimg.cc/N0svSLyZ/Pngtree-secretary-s-day-secretary-work-4389321.png" alt="Vishva">-->
+               <img src="https://i.postimg.cc/N0svSLyZ/Pngtree-secretary-s-day-secretary-work-4389321.png" alt="Vishva">
                 </div>
             </div>
             </div>
@@ -30,15 +49,14 @@
 
     <nav class="bottom-nav">
         <img src="./images/VISHVA.png" alt="">
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Projects</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
+        <a href="#">Home</a>
+        <a href="#about">About</a>
+        <a href="#project">Projects</a>
+        <a href="#contact">Contact</a>
+
     </nav>
 
-    <section class="about">
+    <section class="about" id="about">
         <div class="about-container">
             <div class="box">
                 <h1 class="reveal-text">About</h1>
@@ -48,7 +66,7 @@
                      blending technical expertise and creativity to deliver exceptional projects. My background in data science allows me to integrate data-driven insights, ensuring optimized performance and user engagement. I thrive on new challenges and continuous learning.</p>
                 <div class="cv">
                     
-                    <a class="reveal-text" href="" download target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-download"></i>Curriculum Vitae</a>
+                    <a class="reveal-text" href="./images/Resume-Vishva MV.pdf" download target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-download"></i>Curriculum Vitae</a>
                 </div>
             </div>
         </div>
@@ -153,30 +171,32 @@
         </div>
         
     </section>
-    <div class="parallex-box">
-    <section class="projects">
+    <div class="parallex-box" >
+    <section class="projects" >
         <div class="projectHeading">
-            <h1 class="reveal-text">Projects</h1>
+            <h1 class="reveal-text" id="project">Projects</h1>
         </div>
-        <div class="projectList">
+        <div class="projectList" >
             <div class="projectContainer">
                 <div class="project-container-left">
                     <div class="project-img">
-                        <img src="./images/bg-mountain.webp" alt="">
+                        <a href="https://github.com/Vishva2003/Re-Green" class="hoverright">
+                        <img src="./images/project1.png" alt=""></a>
                     </div>
                     <div class="project-heading">
-                        <h1 class="sub-reveal-text-left">12 Fox</h1>
+                        <h3 class="sub-reveal-text-left">RE’GREEN – SMART FARMING COMPANION</h3>
                     </div>
                 </div>
             </div>
 
-            <div class="projectContainer">
+            <div class="projectContainer" >
                 <div class="project-container-right">
                     <div class="project-heading">
-                        <h1 class="sub-reveal-text">12 Fox</h1>
+                        <h3 class="sub-reveal-text">12 FOX</h3>
                     </div>
                     <div class="project-img">
-                        <img src="./images/bg-mountain.webp" alt="">
+                        <a href="https://github.com/Vishva2003/12_Fox" class="hoverleft">
+                        <img src="./images/project2.png" alt=""></a>
                     </div>
                 </div>
             </div>
@@ -184,85 +204,139 @@
             <div class="projectContainer">
                 <div class="project-container-left">
                     <div class="project-img">
-                        <img src="./images/bg-mountain.webp" alt="">
+                        <a href="" class="hoverright">
+                        <img src="./images/project3.png" alt=""></a>
                     </div>
                     <div class="project-heading">
-                        <h1 class="sub-reveal-text-left">12 Fox</h1>
-                    </div>
+                        <h3 class="sub-reveal-text-left">FORECASTING CRYPTOCURRENCY TRENDS USING RNN AND LSTM</h3>                  </div>
                 </div>
             </div>
 
             <div class="projectContainer">
                 <div class="project-container-right">
                     <div class="project-heading">
-                        <h1 class="sub-reveal-text">12 Fox</h1>
+                        <h3 class="sub-reveal-text">12 Fox</h3>
                     </div>
                     <div class="project-img">
-                        <img src="./images/bg-mountain.webp" alt="">
+                        <a href="" class="hoverleft">
+                        <img src="./images/bg-mountain.webp" alt=""></a>
                     </div>
                 </div>
             </div>
 
         </div>
     </section>
-    <section class="contact">
-        <div class="get-in-touch">
-            <div class="form-cover">
-            <h1 class="title">Get in touch</h1>
-            <form class="contact-form row">
-               <div class="form-field col x-50">
-                  <input id="name" class="input-text js-input" type="text" required>
-                  <label class="label" for="name">Name</label>
-               </div>
-               <div class="form-field col x-50">
-                  <input id="email" class="input-text js-input" type="email" required>
-                  <label class="label" for="email">E-mail</label>
-               </div>
-               <div class="form-field col x-100">
-                  <input id="message" class="input-text js-input" type="text" required>
-                  <label class="label" for="message">Message</label>
-               </div>
-               <div class="form-field col x-100 align-center">
-                  <input class="submit-btn" type="submit" value="Submit">
-               </div>
-            </form>
+    <section class="contact" id="contact">
+        
+<div class="container">
+    <div class="inner">
+      <div class="panel panel-left">
+        <div class="panel-content">
+          <div class="infos">
+
+                <div class="row">
+                    <div class="icon">
+                    <i class="fa-solid fa-user-large" aria-hidden="true"></i></div>
+                    <div class="info">
+                      <div class="head">Name</div>
+                      <div class="sub-title"> Vishva MV</div>
+                    </div>
+                  </div>
+
+                <div class="row">
+                    <div class="icon">
+                  <i class="fa-solid fa-envelope" aria-hidden="true"></i></div>
+                  <div class="info">
+                    <div class="head">Email</div>
+                    <div class="sub-title"><a href="mailto:dev.vishvamv@gmail.com" style="text-decoration: none;"> dev.vishvamv@gmail.com</a></div>
+                  </div>
+                </div>
+
+                <div class="row">
+                    <div class="icon">
+                    <i class="fa-solid fa-language"></i></div>
+                  <div class="info">
+                    <div class="head">Language Known</div>
+                    <div class="sub-title">Tamil, English</div>
+                  </div>
+                </div>
+
+                <div class="row">
+                    <div class="icon">
+                  <i class="fa-solid fa-location-dot" aria-hidden="true"></i></div>
+                  <div class="info">
+                    <div class="head">  Address</div>
+                    <div class="sub-title"> Tamilnadu, India</div>
+                  </div>
+                </div>
+
+                <div class="indiantime">
+                    <div class="time">Local Time - <span id="utcTime"></span></div>
+                </div>
+
+
+                <br>
+
+                <!-- Social -->
+                <div class="social-menu">
+                  <ul>
+                    <li><a href="https://github.com/Vishva2003"><i class="fa-brands fa-github" style="color: #fff;"></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/vishva-mv/"><i class="fa-brands fa-linkedin" style="color: #1e90ff;"></i></a></li>
+                    <li><a href="https://www.instagram.com/_vishva_mv/"><i class="fa-brands fa-instagram" style="color: #ff00ff;"></i></a></li>
+                    <li><a href="https://x.com/Vishva_MV"><i class="fa-brands fa-x-twitter" style="color: #fff;"></i></a></li>
+                    
+                  </ul>
+                </div>
+
+                <div class="reserved-left">
+                    <p>© 2024 VISHVA MV. ALL RIGHT RESERVED.</p>
+                </div>
+        
+          </div>
         </div>
+      </div>
+      <div class="panel panel-right">
+        <div class="panel-content">
+          <form class="form" action="https://formsubmit.co/dev.vishvamv@gmail.com" method="POST">
+            <h1>Get in Touch</h1>
+            <div class="group">      
+              <input type="text" required>
+              <span class="highlight"></span>
+              <label>Name</label>
+            </div>
+            <div class="group">      
+              <input type="text" required>
+              <span class="highlight"></span>
+              <label>Email</label>
+            </div>
+            <div class="group">      
+                <textarea name="textarea-398" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea" ></textarea>
+                <span class="highlight"></span>
+                <label class="message">Message</label>
+              </div>
+            <button type="submit" class="send-btn">Send</button>
+            <div class="reserved-right">
+                <p>© 2024 VISHVA MV. ALL RIGHT RESERVED.</p>
+            </div>
+
+            <input type="hidden" name="_autoresponse" value="Thanks for your Intrest!!.
+                Here's what was received.">
+        
+        </form>
         </div>
+      </div>
+    </div>
+  </div>
+  
+
     </section>    
     </div>
 
-
+ 
     <script src="main.js"></script>
-
+    <script src="./cursor.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.12.0/paper-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/simplex-noise/2.4.0/simplex-noise.min.js"></script>
 
 </body>
 </html>
-
-
-<div class="content-wrapper">
-    <div class="get-in-touch">
-        <div class="form-cover">
-        <h1 class="title">Get in touch</h1>
-        <form class="contact-form row">
-           <div class="form-field col x-50">
-              <input id="name" class="input-text js-input" type="text" required>
-              <label class="label" for="name">Name</label>
-           </div>
-           <div class="form-field col x-50">
-              <input id="email" class="input-text js-input" type="email" required>
-              <label class="label" for="email">E-mail</label>
-           </div>
-           <div class="form-field col x-100">
-              <input id="message" class="input-text js-input" type="text" required>
-              <label class="label" for="message">Message</label>
-           </div>
-           <div class="form-field col x-100 align-center">
-              <input class="submit-btn" type="submit" value="Submit">
-           </div>
-        </form>
-    </div>
-    </div>
-   <div class="timezone">
-        gfyuf
-    </div>
-    </div>
