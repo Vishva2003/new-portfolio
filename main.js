@@ -23,7 +23,7 @@ window.addEventListener('scroll', function() {
 
       bottomNavTimeout = setTimeout(() => {
         bottomNav.classList.remove('show');
-    }, 5000);
+    }, 7000);
   } else {
       bottomNav.classList.remove('show');
   }
@@ -178,7 +178,6 @@ function getIndianTime() {
 
   var timeOptions = { hour: '2-digit', minute: '2-digit', hour12: true };
   var indianTimeStr = nd.toLocaleTimeString('en-US', timeOptions);
-  console.log(nd)
   // Return time as a string
   document.getElementById("utcTime").innerHTML = indianTimeStr;
 }
