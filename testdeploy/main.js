@@ -1,3 +1,33 @@
+const inactive = document.querySelector('.inactive');
+const active = document.querySelector('.active');
+const topnav = document.querySelector('.topnav');
+
+function linktree() {
+    inactive.style.display='none';
+    active.style.display = 'block';
+}
+
+function hidetree() {
+  inactive.style.display='block';
+  active.style.display = 'none';
+}
+
+//reveal bottom nav
+let bottomNavTimeout;
+window.addEventListener('scroll', function() {
+  const bottomNav = document.querySelector('.bottom-nav');
+  const pageHeight = window.innerHeight/2;
+
+  if (window.scrollY >= pageHeight) {
+      bottomNav.classList.add('show');
+
+      bottomNavTimeout = setTimeout(() => {
+        bottomNav.classList.remove('show');
+    }, 7000);
+  } else {
+      bottomNav.classList.remove('show');
+  }
+});
 
 //reveal-text
 
@@ -25,9 +55,9 @@ window.addEventListener('scroll', () => {
   fadeInElements.forEach(element => {
       const elementRect = element.getBoundingClientRect();
       if (elementRect.top < triggerHeight) {
-          element.classList.add('active');
+          element.classList.add('active-left');
       }else{
-        element.classList.remove('active');
+        element.classList.remove('active-left');
       }
   });
 });
@@ -41,9 +71,9 @@ window.addEventListener('scroll', () => {
   fadeInElements.forEach(element => {
       const elementRect = element.getBoundingClientRect();
       if (elementRect.top < triggerHeight) {
-          element.classList.add('active');
+          element.classList.add('active-right');
       }else{
-        element.classList.remove('active');
+        element.classList.remove('active-right');
       }
   });
 });
@@ -100,7 +130,7 @@ window.addEventListener('scroll', () => {
   console.log('projectsOffsetBottom:',projectsOffsetBottom);
 
   const viewportHeight = window.innerHeight;
-  const threshold = viewportHeight * 0.001;
+  const threshold = viewportHeight * 0;
 
   // Check if the project heading should be sticky or relative
   if ((window.scrollY + threshold > projectsOffsetTop) && (window.scrollY+ threshold < projectsOffsetBottom)) {
@@ -120,9 +150,43 @@ document.querySelectorAll('.js-input').forEach(function(input) {
           input.classList.add('not-empty');
       } else {
           input.classList.remove('not-empty');
+          
       }
   });
 });
+
+
+//timezone
+
+function getIndianTime() {
+  var d = new Date();
+
+  // IST is UTC + 5.5 hours
+  var offset = 5.5;
+
+  // Obtain local time in milliseconds
+  var localTime = d.getTime();
+
+  // Obtain local offset in milliseconds
+  var localOffset = d.getTimezoneOffset() * 60000;
+
+  // Obtain UTC time in milliseconds
+  var utc = localTime + localOffset;
+
+  // Create new Date object for IST using the offset
+  var nd = new Date(utc + (3600000 * offset));
+
+  var timeOptions = { hour: '2-digit', minute: '2-digit', hour12: true };
+  var indianTimeStr = nd.toLocaleTimeString('en-US', timeOptions);
+  // Return time as a string
+  document.getElementById("utcTime").innerHTML = indianTimeStr;
+}
+
+// Call the function to display the time
+getIndianTime();
+
+// Optional: Set an interval to update the time every second
+setInterval(getIndianTime, 1000);
 
 
 
