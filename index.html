@@ -8,7 +8,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="port.css">
 </head>
-<body>
+<body onload="preloader()" >
+    <div class="loader">
+        <div class="loadercontainer">
+            <div></div>
+    
+            <div></div>
+        </div>
+    </div>
 
     <div class="cursor cursor--small"></div>
     <canvas class="cursor cursor--canvas" resize></canvas>
@@ -340,8 +347,24 @@
     </div>
 
  
-    <script src="./main.js"></script>
+    <script src="main.js"></script>
     <script src="./cursor.js"></script>
+    <script>
+        window.addEventListener('load', function() {
+            // Define the minimum display time for the loader in milliseconds (e.g., 3 seconds)
+            const minDisplayTime = 3000;
+        
+            function hideLoader() {
+              const loader = document.querySelector('.loader');
+              if (loader) {
+                loader.style.display = 'none';
+              }
+            }
+        
+            // Hide the loader after the minimum display time
+            setTimeout(hideLoader, minDisplayTime);
+          });
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.12.0/paper-core.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/simplex-noise/2.4.0/simplex-noise.min.js"></script>
 
