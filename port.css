@@ -10,6 +10,7 @@ body, html {
     font-family: Arial, sans-serif;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    background-color:#000;
 }
 
 :root {
@@ -163,7 +164,9 @@ body, html {
 .page1 {
     width: 100%;
     height: 100vh;    
-    background: url(./images/bg-mountain.png) center center / cover fixed;
+    background:url(./images/shp_BG_dots-1.svg);
+    background-size:cover;
+    background-attachment: fixed;
 }
 
 .hero {
@@ -320,9 +323,7 @@ h1:nth-child(2) {
     .page1 {
         width: 100%;
         height: 100vh;      
-        background: url(./images/bg-mountain.png) center center / cover fixed;
-
-    
+       
     }
     .topnav {
         flex-direction: column;
@@ -716,6 +717,7 @@ h1:nth-child(2) {
     justify-content: center;
     align-items: center;
     cursor: none;
+    margin-top: -2px;
 }
 
 .scroll {
